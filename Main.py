@@ -1,17 +1,9 @@
 # bot.py
-import random
 import discord
 from discord.ext import commands
-from discord import app_commands
-from discord import voice_client
 from dotenv import load_dotenv
-
 import os
-import cv2
-import time
-import json
-import numpy as np
-from numba import jit
+
 import aiohttp
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
