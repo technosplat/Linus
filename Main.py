@@ -4,6 +4,8 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 from discord import voice_client
+from dotenv import load_dotenv
+
 import os
 import cv2
 import time
@@ -11,10 +13,8 @@ import json
 import numpy as np
 from numba import jit
 import aiohttp
-TOKEN = 'ODc0MTM2ODg3MjUyNjM5Nzc1.GOhlUR.0ON5Xx2Gq8wsdlEkpLMXecVE2Nesh2_xRPis9I'
-
-
-
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 class Linus(commands.Bot):
     def __init__(self):
         super().__init__(command_prefix = '!', intents=discord.Intents.all(), application_id=874136887252639775)
